@@ -128,10 +128,11 @@ h1, h2, h3{
 }
 #nameeng{
     font-size: 3em;
+    color: orangered;
 }
 #greet{
     font-size: 3em;
-    background: linear-gradient(to left, blue, skyblue, orangered, red);
+    background: linear-gradient(to left, skyblue, red);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -139,6 +140,7 @@ h1, h2, h3{
 }
 #namejap, #namehin{
     font-size: 2em;
+    color: skyblue;
 }
 .nameeng{
     font-size: 3em;

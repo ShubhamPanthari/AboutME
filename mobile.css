@@ -88,6 +88,7 @@ h1, h2, h3 {
 
 #nameeng{
   font-size: 2em;
+  color: orangered;
 }
 
 #nameeng, #namehin{
@@ -96,6 +97,11 @@ h1, h2, h3 {
 }
 #namejap{
   margin-top: 0;
+  color: skyblue;
+}
+
+#namehin{
+  color: skyblue;
 }
 
 #intro{
@@ -104,7 +110,7 @@ h1, h2, h3 {
 }
 
 .nameeng{
-  color: orange;
+  color: orangered;
 }
 .namejap{
   color:skyblue
@@ -113,7 +119,7 @@ h1, h2, h3 {
 #greet{
   font-size: 2em;
   margin-bottom: 0;
-  background: linear-gradient(to left, blue, skyblue, orangered, red);
+  background: linear-gradient(to left, skyblue, red);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
