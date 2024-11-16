@@ -6,6 +6,10 @@ body{
     background-color: black;
     color: white;
     display: flex;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-snap-stop: always;
+    scroll-snap-type: y mandatory;
 }
 .navbar{
     display: flex;
@@ -13,13 +17,13 @@ body{
     align-items: center;
     height: 7vh;
     position: fixed;
+    justify-content: space-between;
 }
 .logo{
     padding: 0;
     padding-left: 1em;
     margin: 0;
     width: 60%;
-    list-style-type: none;
     display: flex;
     justify-self: flex-start;
     flex-grow: 1;
@@ -33,33 +37,48 @@ body{
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
-    list-style-type: none;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 800;
     font-size: 1.1em;
 }
+.navlist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navlist li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 .navlink{
     color: white;
+    padding: 2%;
 }
 .navlink:hover{
-    background-color: white;
+    background-color: skyblue;
     color: black;
-    border-radius: 10%;
+    font-weight: 800;
 }
+.navlink {
+    transition: background-color 0.5s, color 0.2s;
+}
+
 .main{
     padding: 0;
     margin: 0;
     scroll-snap-type: y mandatory;
-    overflow-y: hidden;
     scroll-snap-stop: always;
     height: 100vh;
+    overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none; /* for Firefox */
-  -ms-overflow-style: none; /* for IE and Edge */
+    -ms-overflow-style: none; /* for IE and Edge */
 }
 .main::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
+
 #cont{
     padding: 0;
     margin: 0;
@@ -70,6 +89,7 @@ body{
 a{
     text-decoration: none;
 }
+
 .bod{
     margin: 0;
     padding: 0;
@@ -81,7 +101,22 @@ a{
     align-items: start;
     padding-left: 5%;
     scroll-snap-align: start;
+    overflow-y: hidden;
+    scroll-snap-stop: always;
+    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none; /* for IE and Edge */
 }
+
+.inpagelink{
+    color: aqua;
+    transition: background-color 0.5s, color 0.2s;
+}
+.inpagelink:hover{
+    color: orangered;
+    background-color: skyblue;
+    font-weight: 800;
+}
+
 .G{
     font-size: 3em;
     margin: 0;
@@ -96,16 +131,23 @@ h1, h2, h3{
 }
 #greet{
     font-size: 3em;
+    background: linear-gradient(to left, blue, skyblue, orangered, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 #namejap, #namehin{
     font-size: 2em;
 }
 .nameeng{
     font-size: 3em;
+    color: orangered;
 }
 .namejap{
     padding-top: 1em;
     font-size: 2em;
+    color: skyblue;
 }
 .greet{
     font-size: 3em;
@@ -120,9 +162,8 @@ h1, h2, h3{
     padding: 0%;
     margin: 0%;
     position: fixed;
-    margin-left: 60%;
+    margin-left: 59%;
     margin-top: 40vh;
-    margin-right: 5%;
 }
 .sidenavitem{
     margin: 0;
@@ -135,6 +176,7 @@ h1, h2, h3{
     flex-grow: 1;
     padding-top: 7vh;
     align-items: end;
+    gap: 1em;
 }
 .sidenavlink{
     color: white;
@@ -147,8 +189,11 @@ h1, h2, h3{
     background-color: white;
     font-weight: 800;
     color: black;
-    border-radius: 10%;
 }
+.sidenavlink {
+    transition: background-color 0.5s, color 0.2s;
+}
+
 .sidenavlink.active {
     background-color: #333;
     color: #fff;
@@ -190,4 +235,10 @@ h1, h2, h3{
   
   .toggle-btn.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  #edu, #greetingssec{
+    overflow-y: scroll;
+  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none; /* for IE and Edge */
   }

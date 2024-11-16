@@ -1,128 +1,236 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #111;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-  }
-  
-  .logo {
-    font-size: 2em;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-  
-  .navlist {
-    display: flex;
-    list-style-type: none;
-    margin-right: 10px;
-  }
-  
-  .navlink {
-    margin-right: 10px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navlink:hover {
-    background-color: #555;
-    border-radius: 5px;
-  }
-  
-  .main {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .bod {
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #333;
-    border-radius: 5px;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .G {
-    font-size: 3em;
-    margin-bottom: 10px;
-  }
-  
-  .nameeng {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .namejap,
-  .namehin {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .heroc {
-    margin-bottom: 20px;
-  }
-  
-  .sidenav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #333;
-    padding: 10px;
-    margin-top: 70px;
-    margin-left: 10px;
-    width: 200px;
-  }
-  
-  .sidenavitem {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-    padding-top: 7vh;
-    align-items: end;
-  }
-  
-  .sidenavlink {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .sidenavlink:hover {
-    background-color: #555;
-    border-radius: 5px;
-  }
-  
-  .sidenavlink.active {
-    background-color: #555;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-  }
+  font-size: 1em;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.bod {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.main{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-snap-stop: always;
+  height: 100vh;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* for Firefox */
+-ms-overflow-style: none; /* for IE and Edge */
+}
+
+.navbar {
+  padding: 1em;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.logo {
+  font-size: 1.2em;
+  padding-left: 0.5em;
+  display: none;
+}
+
+.navlist {
+  font-size: 1em;
+  padding-right: 0.5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.navlink {
+  padding: 0.5em;
+  margin-left: 1em;
+  color: white;
+}
+
+.navlink:hover {
+  background-color: skyblue;
+  color: black;
+  font-weight: 800;
+}
+
+.navlink {
+  transition: background-color 0.5s, color 0.2s;
+}
+
+/* Adjust font sizes for mobile devices */
+h1, h2, h3 {
+  font-size: 1.5em;
+}
+
+#nameeng{
+  font-size: 2em;
+}
+
+#nameeng, #namehin{
+  padding: 0%;
+  margin: 0%;
+}
+#namejap{
+  margin-top: 0;
+}
+
+#intro{
+  margin-bottom: 2em;
+  font-size: 1.2em;
+}
+
+.nameeng{
+  color: orange;
+}
+.namejap{
+  color:skyblue
+}
+
+#greet{
+  font-size: 2em;
+  margin-bottom: 0;
+  background: linear-gradient(to left, blue, skyblue, orangered, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+}
+
+.G{
+  font-size: 3em;
+}
+
+.heroc {
+  font-size: 1em;
+  color: white;
+}
+
+/* Other adjustments */
+
+a {
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.inpagelink{
+  color: aqua;
+}
+
+.inpagelink:hover{
+  color: orangered;
+  background-color: skyblue;
+  font-weight: 800;
+
+}
+
+a:hover {
+  background-color: white;
+  color: black;
+}
+
+.sidenav {
+  display: none;
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  width: 20vw;
+  background-color: black;
+  padding-right: 2em;
+  padding-left: 0;
+  z-index: 2;
+  overflow: visible; /* added overflow property */
+}
+.sidenav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidenav li {
+  padding: 1em;
+  border-bottom: 1px solid white;
+}
+
+.sidenav a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidenav a:hover {
+  background-color: white;
+  color: black;
+}
+.sidenav a.active {
+  color: white;
+  background-color: gray;
+  text-decoration: none;
+}
+.sidenav.show {
+  display: block;
+}
+.toggle-sidenav {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  /* rest of the CSS rules */
+}
+.hamburger {
+  position: absolute;
+  top: 10em;
+  right: 1em;
+  background-color: #ffffff;
+  color: #cf0a0a;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.hamburger span {
+  width: 20px;
+  height: 2px;
+  background-color: #c81919;
+  margin-bottom: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hamburger.show span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.show span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.show span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
